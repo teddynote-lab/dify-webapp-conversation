@@ -1,25 +1,36 @@
-'use client'
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
-import commonEn from './lang/common.en'
-import commonEs from './lang/common.es'
-import commonZh from './lang/common.zh'
-import commonVi from './lang/common.vi'
-import commonJa from './lang/common.ja'
-import appEn from './lang/app.en'
-import appEs from './lang/app.es'
-import appZh from './lang/app.zh'
-import appVi from './lang/app.vi'
-import appJa from './lang/app.ja'
-import toolsEn from './lang/tools.en'
-import toolsZh from './lang/tools.zh'
-import toolsVi from './lang/tools.vi'
-import toolsJa from './lang/tools.ja'
+"use client";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import commonKo from "./lang/common.ko";
+import commonEn from "./lang/common.en";
+import commonEs from "./lang/common.es";
+import commonZh from "./lang/common.zh";
+import commonVi from "./lang/common.vi";
+import commonJa from "./lang/common.ja";
+import appKo from "./lang/app.ko";
+import appEn from "./lang/app.en";
+import appEs from "./lang/app.es";
+import appZh from "./lang/app.zh";
+import appVi from "./lang/app.vi";
+import appJa from "./lang/app.ja";
+import toolsKo from "./lang/tools.ko";
+import toolsEn from "./lang/tools.en";
+import toolsZh from "./lang/tools.zh";
+import toolsVi from "./lang/tools.vi";
+import toolsJa from "./lang/tools.ja";
 
-import type { Locale } from '.'
+import type { Locale } from ".";
 
 const resources = {
-  'en': {
+  ko: {
+    translation: {
+      common: commonKo,
+      app: appKo,
+      // tools
+      tools: toolsKo,
+    },
+  },
+  en: {
     translation: {
       common: commonEn,
       app: appEn,
@@ -27,13 +38,13 @@ const resources = {
       tools: toolsEn,
     },
   },
-  'es': {
+  es: {
     translation: {
       common: commonEs,
       app: appEs,
     },
   },
-  'zh-Hans': {
+  "zh-Hans": {
     translation: {
       common: commonZh,
       app: appZh,
@@ -41,7 +52,7 @@ const resources = {
       tools: toolsZh,
     },
   },
-  'vi': {
+  vi: {
     translation: {
       common: commonVi,
       app: appVi,
@@ -49,7 +60,7 @@ const resources = {
       tools: toolsVi,
     },
   },
-  'ja': {
+  ja: {
     translation: {
       common: commonJa,
       app: appJa,
@@ -57,19 +68,20 @@ const resources = {
       tools: toolsJa,
     },
   },
-}
+};
 
-i18n.use(initReactI18next)
+i18n
+  .use(initReactI18next)
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    lng: 'en',
-    fallbackLng: 'en',
+    lng: "ko",
+    fallbackLng: "ko",
     // debug: true,
     resources,
-  })
+  });
 
 export const changeLanguage = (lan: Locale) => {
-  i18n.changeLanguage(lan)
-}
-export default i18n
+  i18n.changeLanguage(lan);
+};
+export default i18n;
