@@ -111,6 +111,7 @@ export type AppInfo = {
   default_language: Locale
   copyright?: string
   privacy_policy?: string
+  logoUrl?: string
 }
 
 export enum Resolution {

@@ -8,6 +8,7 @@ export const APP_INFO: AppInfo = {
   copyright: "TeddyNote",
   privacy_policy: "/privacy",
   default_language: "ko",
+  logoUrl: "/teddynote-logo.png",
 };
 
 export const isShowPrompt = false;
